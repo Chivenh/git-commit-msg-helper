@@ -6,9 +6,9 @@ plugins {
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
-
+buildSearchableOptions.enabled = false
 group 'com.chivenh'
-version '1.0.1'
+version '1.0.1-191'
 
 sourceCompatibility = 1.8
 
