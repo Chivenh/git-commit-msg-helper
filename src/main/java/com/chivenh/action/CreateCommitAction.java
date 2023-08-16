@@ -11,9 +11,9 @@ import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.vcs.CommitMessageI;
 import com.intellij.openapi.vcs.VcsDataKeys;
+import com.intellij.openapi.vcs.changes.ui.ChangesViewCommitPanel;
 import com.intellij.openapi.vcs.ui.CommitMessage;
 import com.intellij.openapi.vcs.ui.Refreshable;
-import com.intellij.vcs.commit.ChangesViewCommitPanel;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -38,7 +38,7 @@ public class CreateCommitAction extends AnAction implements DumbAware {
         if(context instanceof CommitMessage){
         	currentMsg=((CommitMessage) context).getComment();
 		}else if(context instanceof ChangesViewCommitPanel){
-        	currentMsg=((ChangesViewCommitPanel) context).getCommitMessageUi().getText();
+        	currentMsg=((ChangesViewCommitPanel) context).getCommitMessage().getComment();
 		} else{
 			LOG.warn(context.toString()+"\n------can't get msg!");
 		}
