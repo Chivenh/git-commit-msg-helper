@@ -34,7 +34,7 @@ public class CommitMessage {
 			}
 		}
 		if (StringUtils.isNotBlank(changeScope)) {
-			commitTemplate.setScope(changeScope);
+			commitTemplate.setScope(changeScope.trim().replaceAll("\\s+","_"));
 			valid++;
 		}
 		if (StringUtils.isNotBlank(shortDescription)) {

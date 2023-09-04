@@ -64,9 +64,17 @@ public class CommitPanel {
 		if(StringUtils.isBlank(scope)){
 			return new ValidationInfo(msgChangeScope.getName()+ BundleHelper.message("commitPanel.required.error"),msgChangeScope);
 		}
+		int maxScope=10;
+		if(StringUtils.length(scope)>maxScope){
+			return new ValidationInfo(BundleHelper.message("commitPanel.over.error",msgChangeScope.getName(),maxScope),msgChangeScope);
+		}
 		String subject = msgShortDescription.getText().trim();
 		if(StringUtils.isBlank(subject)){
 			return new ValidationInfo(msgShortDescription.getName()+ BundleHelper.message("commitPanel.required.error"),msgShortDescription);
+		}
+		int maxSubject=50;
+		if(StringUtils.length(subject)>maxSubject){
+			return new ValidationInfo(BundleHelper.message("commitPanel.over.error",msgShortDescription.getName(),maxSubject),msgShortDescription);
 		}
 		return null;
 	}
