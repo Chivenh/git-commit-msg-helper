@@ -29,7 +29,7 @@ intellij {
 //    version 'IU-2017.1'
     version="IU-233.11799.300"
     pluginName='Git Commit Msg Helper'
-    updateSinceUntilBuild=false1
+    updateSinceUntilBuild=false
 }
 
 patchPluginXml {
