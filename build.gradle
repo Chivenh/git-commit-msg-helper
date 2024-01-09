@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.4.14'
+    id 'org.jetbrains.intellij' version '1.16.1'
 }
 
 tasks.withType(JavaCompile) {
@@ -10,30 +10,30 @@ buildSearchableOptions.enabled = false
 group 'com.chivenh'
 version '1.0.5'
 
-sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     maven { url "https://www.jetbrains.com/intellij-repository/releases" }
+    maven { url "https://www.jetbrains.com/intellij-repository/snapshots" }
     maven { url "https://cache-redirector.jetbrains.com/intellij-dependencies" }
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'uk.com.robust-it', name: 'cloning', version: '1.9.12'
-
+    testImplementation group: 'junit', name: 'junit', version: '4.13.1'
+    implementation group: 'uk.com.robust-it', name: 'cloning', version: '1.9.12'
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
 //    version 'IU-2017.1'
-    version 'IU-2020.2'
-    pluginName 'Git Commit Msg Helper'
-    updateSinceUntilBuild false
+    version="IU-233.11799.300"
+    pluginName='Git Commit Msg Helper'
+    updateSinceUntilBuild=false
 }
 
 patchPluginXml {
-    changeNotes '<ul>\n' +
+    changeNotes='<ul>\n' +
             '              <li>version '+version+'<br>\n' +
             "                 提交信息对话框优化。<br>Git commit dialog optimization.\n" +
             '              </li>\n' +
