@@ -32,7 +32,7 @@
     </change-notes>
 
     <resource-bundle>messages.git-msg</resource-bundle>
-    <idea-version since-build="202.0"/>
+    <idea-version since-build="233"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->

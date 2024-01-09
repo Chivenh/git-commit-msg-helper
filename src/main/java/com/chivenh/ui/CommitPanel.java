@@ -6,7 +6,7 @@ import com.chivenh.storage.GitCommitMsgHelperSettings;
 import com.chivenh.utils.BundleHelper;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.ValidationInfo;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.swing.*;
 import java.util.List;

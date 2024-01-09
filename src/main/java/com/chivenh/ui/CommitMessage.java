@@ -5,7 +5,7 @@ import com.chivenh.model.TypeAlias;
 import com.chivenh.storage.GitCommitMsgHelperSettings;
 import com.chivenh.utils.BundleHelper;
 import com.chivenh.utils.VelocityUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

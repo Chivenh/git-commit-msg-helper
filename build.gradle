@@ -8,7 +8,7 @@ tasks.withType(JavaCompile) {
 }
 buildSearchableOptions.enabled = false
 group 'com.chivenh'
-version '1.0.5'
+version '1.0.6'
 
 sourceCompatibility = JavaVersion.VERSION_17
 
@@ -29,13 +29,13 @@ intellij {
 //    version 'IU-2017.1'
     version="IU-233.11799.300"
     pluginName='Git Commit Msg Helper'
-    updateSinceUntilBuild=false
+    updateSinceUntilBuild=false1
 }
 
 patchPluginXml {
     changeNotes='<ul>\n' +
             '              <li>version '+version+'<br>\n' +
-            "                 提交信息对话框优化。<br>Git commit dialog optimization.\n" +
+            "                 适配IU 2023.3。<br>Adapt IU 2023.3.\n" +
             '              </li>\n' +
             '           </ul>'
 }
