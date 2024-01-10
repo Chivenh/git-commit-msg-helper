@@ -11,7 +11,7 @@ public class GitCommitConstants {
 	 */
 	public static final String DEFAULT_TEMPLATE =
 			// @formatter:off
-			"#if($type)${type}#end#if($scope)(${scope})#end: #if($subject)${subject}#end\n"
+			"#if($type)${type}#end#if($scope)(${scope})#end: #if($subject)${subject}#end"
 					+ "#if($body)${breakLine}${section}${body}#end\n"
 					+ "#if($hasFooter)${section}#end\n"
 					+ "#if($changes)${breakLine}BREAKING CHANGE: ${changes}#end\n"
